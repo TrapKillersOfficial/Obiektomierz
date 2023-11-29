@@ -125,6 +125,7 @@ public class Wektory
                         }
                     case "2":
                         {
+                            // teraz długość
                             break;
                         }
                     case "3":
