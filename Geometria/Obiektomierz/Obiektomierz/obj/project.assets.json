@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MojeDokumenty\\StudiaGeoinformatyka\\Semestr_V\\GEKON\\projektyGitHub\\Geometria\\Obiektomierz\\Obiektomierz\\Obiektomierz.csproj",
+      "projectUniqueName": "D:\\MojeDokumenty\\StudiaGeoinformatyka\\Semestr_V\\GEKON\\ObiektomierzGitHub\\Geometria\\Obiektomierz\\Obiektomierz\\Obiektomierz.csproj",
       "projectName": "Obiektomierz",
-      "projectPath": "D:\\MojeDokumenty\\StudiaGeoinformatyka\\Semestr_V\\GEKON\\projektyGitHub\\Geometria\\Obiektomierz\\Obiektomierz\\Obiektomierz.csproj",
+      "projectPath": "D:\\MojeDokumenty\\StudiaGeoinformatyka\\Semestr_V\\GEKON\\ObiektomierzGitHub\\Geometria\\Obiektomierz\\Obiektomierz\\Obiektomierz.csproj",
       "packagesPath": "C:\\Users\\adamk\\.nuget\\packages\\",
-      "outputPath": "D:\\MojeDokumenty\\StudiaGeoinformatyka\\Semestr_V\\GEKON\\projektyGitHub\\Geometria\\Obiektomierz\\Obiektomierz\\obj\\",
+      "outputPath": "D:\\MojeDokumenty\\StudiaGeoinformatyka\\Semestr_V\\GEKON\\ObiektomierzGitHub\\Geometria\\Obiektomierz\\Obiektomierz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adamk\\AppData\\Roaming\\NuGet\\NuGet.Config",
