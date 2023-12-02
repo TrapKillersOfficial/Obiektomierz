@@ -33,15 +33,16 @@ public class Wektory
                 {
                     case "1":
                         {
+                            // wsp wektora
                             pentla3 = true;
                             while (pentla3)
                             {
                                 string wyb = Wybor();
 
-                                if (wyb == "2")
+                                if (wyb == "2") // dwuwymiarowy
                                 {
-                                    string odp = Wsp2();
-                                    Console.WriteLine($"\nWspółrzędne wektora to: {odp}");
+                                    List<double> odp = Wsp2();
+                                    Console.WriteLine($"\nWspółrzędne wektora to: [{odp[0]} | {odp[1]}]");
                                     Console.Write("\nCzy chcesz teraz:\n" +
                                             "1. Obliczyć ponownie współrzędne wektora\n" +
                                             "2. Wyprubować nową funkcję obliczeniową\n" +
@@ -79,10 +80,10 @@ public class Wektory
                                         pentla2 = false;
                                     }
                                 }
-                                else
+                                else // trujwymiarowy
                                 {
-                                    string odp = Wsp3();
-                                    Console.WriteLine($"\nWspółrzędne wektora to: {odp}");
+                                    List<double> odp = Wsp3();
+                                    Console.WriteLine($"\nWspółrzędne wektora to: {odp[0]} | {odp[1]} | {odp[2]}");
                                     Console.Write("\nCzy chcesz teraz:\n" +
                                             "1. Obliczyć ponownie współrzędne wektora\n" +
                                             "2. Wyprubować nową funkcję obliczeniową\n" +
@@ -125,11 +126,203 @@ public class Wektory
                         }
                     case "2":
                         {
-                            // teraz długość
+                            // dlugosc wektora
+                            pentla3 = true;
+                            while (pentla3)
+                            {
+                                string wyb = Wybor();
+
+                                if (wyb == "2")
+                                {
+                                    List<double> lista = Wsp2();
+                                    double odp = Dlugosc(lista);
+                                    Console.WriteLine($"\nDługość wektora wynosi: {odp}");
+
+                                    Console.Write("\nCzy chcesz teraz:\n" +
+                                            "1. Obliczyć ponownie współrzędne wektora\n" +
+                                            "2. Wyprubować nową funkcję obliczeniową\n" +
+                                            "3. Wrócić do menu wyboru kategorii\n");
+
+                                    pentla4 = true;
+                                    while (pentla4)
+                                    {
+
+                                        Console.Write("\nWprowadź kod z dostępnych powyżej opcji: ");
+                                        wybor = Console.ReadLine();
+                                        wybor = wybor.ToUpper();
+                                        if (wybor == "1")
+                                        {
+                                            pentla4 = false;
+                                        }
+                                        else if (wybor == "2")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            Console.WriteLine("");
+                                        }
+                                        else if (wybor == "3")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            pentla1 = false;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("\nBłedny kod wyboru!");
+                                        }
+                                        pentla2 = false;
+                                    }
+                                }
+                                else
+                                {
+                                    List<double> lista = Wsp3();
+                                    double odp = Dlugosc(lista);
+                                    
+                                    Console.WriteLine($"\nDługość wektora wynosi: {odp}");
+                                    Console.Write("\nCzy chcesz teraz:\n" +
+                                            "1. Obliczyć ponownie współrzędne wektora\n" +
+                                            "2. Wyprubować nową funkcję obliczeniową\n" +
+                                            "3. Wrócić do menu wyboru kategorii\n");
+
+                                    pentla4 = true;
+                                    while (pentla4)
+                                    {
+
+                                        Console.Write("\nWprowadź kod z dostępnych powyżej opcji: ");
+                                        wybor = Console.ReadLine();
+                                        wybor = wybor.ToUpper();
+                                        if (wybor == "1")
+                                        {
+                                            pentla4 = false;
+                                        }
+                                        else if (wybor == "2")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            Console.WriteLine("");
+                                        }
+                                        else if (wybor == "3")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            pentla1 = false;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("\nBłedny kod wyboru!");
+                                        }
+                                        pentla2 = false;
+                                    }
+                                }
+                            }
                             break;
                         }
                     case "3":
                         {
+                            // dodawanie wektorow
+                            pentla3 = true;
+                            while (pentla3)
+                            {
+                                string wyb = Wybor();
+
+                                if (wyb == "2")
+                                {
+                                    Console.WriteLine("\nWprowadź współrzędne pierwszego wektora:\n ");
+                                    List<double> lista1 = Wsp2();
+                                    Console.WriteLine("\nWprowadź współrzędne drugiego wektora:\n ");
+                                    List<double> lista2 = Wsp2();
+                                    List<double> odp = Dodawanie(lista1,lista2);
+                                    Console.WriteLine($"\nSuma dwóch wektorów daje wektor o współrzędnych: [{odp[0]} | {odp[1]}]");
+
+                                    Console.Write("\nCzy chcesz teraz:\n" +
+                                            "1. Obliczyć ponownie współrzędne wektora\n" +
+                                            "2. Wyprubować nową funkcję obliczeniową\n" +
+                                            "3. Wrócić do menu wyboru kategorii\n");
+
+                                    pentla4 = true;
+                                    while (pentla4)
+                                    {
+
+                                        Console.Write("\nWprowadź kod z dostępnych powyżej opcji: ");
+                                        wybor = Console.ReadLine();
+                                        wybor = wybor.ToUpper();
+                                        if (wybor == "1")
+                                        {
+                                            pentla4 = false;
+                                        }
+                                        else if (wybor == "2")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            Console.WriteLine("");
+                                        }
+                                        else if (wybor == "3")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            pentla1 = false;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("\nBłedny kod wyboru!");
+                                        }
+                                        pentla2 = false;
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\nWprowadź współrzędne pierwszego wektora:\n ");
+                                    List<double> lista1 = Wsp2();
+                                    Console.WriteLine("\nWprowadź współrzędne drugiego wektora:\n ");
+                                    List<double> lista2 = Wsp2();
+                                    List<double> odp = Dodawanie(lista1, lista2);
+                                    Console.WriteLine($"\nSuma dwóch wektorów daje wektor o współrzędnych: [{odp[0]} | {odp[1]} | {odp[2]}]");
+
+                                    Console.WriteLine($"\nDługość wektora wynosi: {odp}");
+                                    Console.Write("\nCzy chcesz teraz:\n" +
+                                            "1. Obliczyć ponownie współrzędne wektora\n" +
+                                            "2. Wyprubować nową funkcję obliczeniową\n" +
+                                            "3. Wrócić do menu wyboru kategorii\n");
+
+                                    pentla4 = true;
+                                    while (pentla4)
+                                    {
+
+                                        Console.Write("\nWprowadź kod z dostępnych powyżej opcji: ");
+                                        wybor = Console.ReadLine();
+                                        wybor = wybor.ToUpper();
+                                        if (wybor == "1")
+                                        {
+                                            pentla4 = false;
+                                        }
+                                        else if (wybor == "2")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            Console.WriteLine("");
+                                        }
+                                        else if (wybor == "3")
+                                        {
+                                            pentla4 = false;
+                                            pentla3 = false;
+                                            pentla2 = false;
+                                            pentla1 = false;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("\nBłedny kod wyboru!");
+                                        }
+                                        pentla2 = false;
+                                    }
+                                }
+                            }
                             break;
                         }
                     case "4":
@@ -213,7 +406,7 @@ public class Wektory
         return "";
     } 
 
-    public static string Wsp2()
+    public static List<double> Wsp2()
     {
         bool pentla;
 
@@ -235,9 +428,14 @@ public class Wektory
                 double y2 = Convert.ToDouble(Console.ReadLine());
                 double X = x2 - x1;
                 double Y = y2 - y1;
-                string XY = $"[{X} , {Y}]";
+                List<double> XY = new List<double> { X, Y };
+                List<double> roundXY = new List<double> {};
+                foreach (double i in XY)
+                {
+                    roundXY.Add(Math.Round(i,4));
+                }
                 pentla = false;
-                return XY;
+                return roundXY;
             }
             catch
             {
@@ -247,7 +445,7 @@ public class Wektory
         return null;
     }
 
-    public static string Wsp3()
+    public static List<double> Wsp3()
     {
         bool pentla;
 
@@ -274,9 +472,14 @@ public class Wektory
                 double X = x2 - x1;
                 double Y = y2 - y1;
                 double Z = z2 - z1;
-                string XY = $"[{X} , {Y} , {Z}]";
+                List<double> XYZ = new List<double> {X,Y,Z};
+                List<double> roundXYZ = new List<double> { };
+                foreach (double i in XYZ)
+                {
+                    roundXYZ.Add(Math.Round(i, 4));
+                }
                 pentla = false;
-                return XY;
+                return XYZ;
             }
             catch
             {
@@ -286,4 +489,32 @@ public class Wektory
         return null;
     }
 
+    public static double Dlugosc(List<double> wsp) 
+    {
+        List<double> potega = new List<double>();
+        foreach (double i in wsp)
+        {
+            potega.Add(Math.Pow(i, 2));
+        }
+        double dl = Math.Sqrt(potega.Sum());
+        dl = Math.Round(dl,4);
+        return dl;
+    }
+
+    public static List<double> Dodawanie(List<double> lista1, List<double> lista2)
+    {
+        List<double> listaSuma = new List<double>();
+        if (lista1.Count == 2)
+        {
+            listaSuma.Add(lista1[0]+lista2[0]);
+            listaSuma.Add(lista1[1]+lista2[1]);
+        }
+        else
+        {
+            listaSuma.Add(lista1[0] + lista2[0]);
+            listaSuma.Add(lista1[1] + lista2[1]);
+            listaSuma.Add(lista1[2] + lista2[2]);
+        }
+        return listaSuma;   
+    }
 }
